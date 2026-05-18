@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/react";
 import { IBM_Plex_Sans, JetBrains_Mono } from "next/font/google";
 import { ReactNode, Suspense } from "react";
 
@@ -52,6 +53,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           </Suspense>
           <Toast />
         </ToastProvider>
+        <Analytics />
       </body>
     </html>
   );
