@@ -511,6 +511,14 @@ button { cursor: pointer; background: none; border: none; padding: 0; }
     justify-content: center !important;
     gap: 8px 14px !important;
   }
+  /* Stack the footer's 3-col grid (logo | nav | copyright) vertically on mobile */
+  footer > div[style*="grid-template-columns: auto 1fr auto"],
+  footer > div[style*="grid-template-columns:auto 1fr auto"] {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 14px !important;
+    text-align: center !important;
+  }
   footer a {
     font-size: 11px !important;
     white-space: nowrap !important;

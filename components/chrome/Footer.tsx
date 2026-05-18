@@ -11,6 +11,7 @@ interface FooterLink {
 }
 
 const LINKS: FooterLink[] = [
+  { label: "Contact",            href: "mailto:xorvion.ai@gmail.com" },
   { label: "Terms & Conditions", toast: "Terms doc opens in a new tab. (Demo mode — no PDF attached.)" },
   { label: "Privacy Policy",     toast: "We log only the URL string and verdict — never page contents." },
   { label: "Responsible disclosure", toast: "Email: security@safetrace.example. PGP key on About page." },
@@ -23,6 +24,7 @@ export function Footer() {
   const toast = useToast();
 
   const onClick = (e: React.MouseEvent<HTMLAnchorElement>, l: FooterLink) => {
+    if (l.href?.startsWith("mailto:")) return;
     e.preventDefault();
     if (l.href) { router.push(l.href); window.scrollTo({ top: 0, behavior: "smooth" }); return; }
     toast({ kind: "info", title: l.label, message: l.toast || "Coming soon." });
