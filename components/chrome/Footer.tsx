@@ -11,10 +11,10 @@ interface FooterLink {
 }
 
 const LINKS: FooterLink[] = [
-  { label: "Contact",            href: "mailto:xorvion.ai@gmail.com" },
+  { label: "Contact Us",         href: "mailto:xorvion.ai@gmail.com" },
   { label: "Terms & Conditions", toast: "Terms doc opens in a new tab. (Demo mode — no PDF attached.)" },
   { label: "Privacy Policy",     toast: "We log only the URL string and verdict — never page contents." },
-  { label: "Responsible disclosure", toast: "Email: security@safetrace.example. PGP key on About page." },
+  { label: "Responsible disclosure", toast: "Email: xorvion.ai@gmail.com" },
   { label: "Status",             toast: "All regions: operational. Median latency 3.8s." },
   { label: "API",                href: "/about" },
 ];
@@ -87,8 +87,10 @@ export function Footer() {
         letterSpacing: "0.02em",
       }}>
         SafeTrace v1.5-beta · By using this service you agree to our{" "}
-        <a href="#" onClick={(e) => onClick(e, LINKS[0])} style={{ color: "var(--text-muted)", textDecoration: "underline", textUnderlineOffset: 2 }}>Terms</a>.
-        Threat intel sourced from PhishTank, OpenPhish, URLhaus & Google Safe Browsing. Not affiliated with any brand shown for impersonation testing.
+        <a href="#" onClick={(e) => onClick(e, LINKS[1])} style={{ color: "var(--text-muted)", textDecoration: "underline", textUnderlineOffset: 2 }}>Terms</a>.
+        {" "}Contact:{" "}
+        <a href="mailto:xorvion.ai@gmail.com" style={{ color: "var(--text-muted)", textDecoration: "underline", textUnderlineOffset: 2 }}>xorvion.ai@gmail.com</a>.
+        {" "}Threat intel sourced from PhishTank, OpenPhish, URLhaus & Google Safe Browsing. Not affiliated with any brand shown for impersonation testing.
       </div>
     </footer>
   );
