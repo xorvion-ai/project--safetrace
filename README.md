@@ -79,7 +79,7 @@ Fully stateless — no database, no user accounts, no tracking. Screenshots are 
 
 ## Built by
 
-**Sumit Kumar** — AI/ML Engineer.
+**Sumit Kumar** — AI/ML Engineer, founder of **[Xorvion](https://xorvion-ai.vercel.app/)**.
 
 Connect with me:
 

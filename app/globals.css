@@ -897,3 +897,43 @@ button { cursor: pointer; background: none; border: none; padding: 0; }
     transform: rotate(90deg);
   }
 }
+
+/* ============================================================
+   Contact page — mobile layout
+   ============================================================ */
+@media (max-width: 768px) {
+  /* Collapse the form (1fr) + right rail (400px) into a single column */
+  [style*="grid-template-columns: minmax(0, 1fr) 400px"],
+  [style*="grid-template-columns:minmax(0,1fr) 400px"] {
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+  }
+  /* Within the form: name + email two-up grid stacks vertically on phones */
+  form [style*="grid-template-columns: 1fr 1fr"],
+  form [style*="grid-template-columns:1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+  /* "Contact us" headline is 64px on desktop — too big on phones */
+  h1[style*="font-size: 64px"],
+  h1[style*="font-size:64px"] {
+    font-size: 40px !important;
+    line-height: 1.05 !important;
+  }
+  /* Topic chip row already wraps via flex-wrap, just keep button hit areas comfortable */
+}
+
+/* ============================================================
+   Footer rewrite — keep new flex-column footer breathing on mobile
+   ============================================================ */
+@media (max-width: 768px) {
+  footer > div {
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+  }
+  /* Tighten the new footer's social-icon row — keep them on one line */
+  footer [style*="display: flex"][style*="gap: 10px"] {
+    flex-wrap: nowrap !important;
+    justify-content: flex-start !important;
+  }
+}
