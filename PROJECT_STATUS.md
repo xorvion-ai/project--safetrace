@@ -94,18 +94,19 @@ The product is positioned as a real security tool, not a college demo. Reference
 - [x] Bulk scan page — CSV drag-drop, live row-by-row processing, KPI cards
 - [x] Threat dashboard — KPI cards, time-series, world map, recent-phishing table
 - [x] About / Methodology page
-- [x] Top nav with route highlighting, version chip, GitHub icon
-- [x] Footer with Contact / Terms / Privacy / Status / API links
+- [x] Top nav with route highlighting (Scan / Bulk / Dashboard / About / Contact), version chip, GitHub icon
+- [x] Footer rebuilt: logo + tagline + 3 icon buttons (Xorvion website, Xorvion LinkedIn, /contact)
 - [x] Theming, splash screen, particle background
 - [x] Verdict chip / risk bar / sub-score / evidence accordion / URL chip / code block components
 - [x] Toast system
 - [x] Vercel Web Analytics enabled
-- [x] Contact email (xorvion.ai@gmail.com) in footer
-- [x] **New logo** (blue shield with fingerprint + magnifying glass) wired into TopNav and Footer
-- [x] **"By xorvion"** branding tagline under SafeTrace wordmark
-- [x] **/contact** page with Web3Forms-backed form, direct/social cards
-- [x] Footer rebuilt with 3 icon buttons: Xorvion website, Xorvion LinkedIn, /contact
+- [x] **Logo:** original inline-SVG steel-and-cyan shield (kept after a brief PNG swap experiment)
+- [x] **"By xorvion"** branding tagline under SafeTrace wordmark (replaces "AI · URL forensics")
+- [x] **/contact** page with Web3Forms-backed form (access key wired client-side), direct + social cards
+- [x] All "Contact" entry points (footer icon, top nav, scan-result CTAs) route to `/contact`
+- [x] New icons added to set: `link`, `mail`, `map-pin`, `send`
 - [x] Xorvion website link (https://xorvion-ai.vercel.app/) in README badges + "Built by" section
+- [x] **Mobile rules** for new surfaces: /contact stacks at ≤768px (form/right-rail single column, name+email single column, 64px headline → 40px); footer social row stays tight on phones
 
 ### Backend (FastAPI, on Hugging Face Spaces)
 
