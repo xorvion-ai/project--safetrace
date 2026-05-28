@@ -2,7 +2,7 @@
 
 **Live:** https://safetrace-ai.vercel.app
 **Owner:** Sumit Kumar ([@Sumitkr28](https://github.com/Sumitkr28))
-**Company:** xorvion
+**Company:** [Xorvion](https://xorvion-ai.vercel.app/) · https://xorvion-ai.vercel.app/
 **Status as of:** 2026-05-29
 **Version:** v1.5-beta
 
@@ -101,8 +101,11 @@ The product is positioned as a real security tool, not a college demo. Reference
 - [x] Toast system
 - [x] Vercel Web Analytics enabled
 - [x] Contact email (xorvion.ai@gmail.com) in footer
-- [x] **New logo** (shield + magnifying glass) wired into TopNav and Footer
+- [x] **New logo** (blue shield with fingerprint + magnifying glass) wired into TopNav and Footer
 - [x] **"By xorvion"** branding tagline under SafeTrace wordmark
+- [x] **/contact** page with Web3Forms-backed form, direct/social cards
+- [x] Footer rebuilt with 3 icon buttons: Xorvion website, Xorvion LinkedIn, /contact
+- [x] Xorvion website link (https://xorvion-ai.vercel.app/) in README badges + "Built by" section
 
 ### Backend (FastAPI, on Hugging Face Spaces)
 

@@ -7,7 +7,13 @@
   <a href="https://safetrace-ai.vercel.app">
     <img src="https://img.shields.io/badge/SafeTrace--ai-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="SafeTrace-ai" height="40" />
   </a>
+  &nbsp;
+  <a href="https://xorvion-ai.vercel.app/">
+    <img src="https://img.shields.io/badge/By%20Xorvion-0891b2?style=for-the-badge&logo=vercel&logoColor=white" alt="By Xorvion" height="40" />
+  </a>
 </p>
+
+<p align="center">A <strong><a href="https://xorvion-ai.vercel.app/">Xorvion</a></strong> product.</p>
 
 ---
 
@@ -73,13 +79,16 @@ Fully stateless — no database, no user accounts, no tracking. Screenshots are 
 
 ## Built by
 
-**Sumit Kumar** — AI/ML Engineer.
+A product by **[Xorvion](https://xorvion-ai.vercel.app/)** — AI infrastructure & security tooling out of Noida, India.
 
-Connect with me:
+**Sumit Kumar** — AI/ML Engineer, founder of Xorvion.
 
-- 📧 [sumitchoudhary2812@gmail.com](mailto:sumitchoudhary2812@gmail.com)
-- 💼 [LinkedIn](https://www.linkedin.com/in/sumitkr28)
-- 💻 [GitHub](https://github.com/Sumitkr28)
+Connect:
+
+- 🌐 [xorvion-ai.vercel.app](https://xorvion-ai.vercel.app/)
+- 💼 [Xorvion on LinkedIn](https://www.linkedin.com/company/xorvion/)
+- 📧 [xorvion.ai@gmail.com](mailto:xorvion.ai@gmail.com) · [sumitchoudhary2812@gmail.com](mailto:sumitchoudhary2812@gmail.com)
+- 👤 [Personal LinkedIn](https://www.linkedin.com/in/sumitkr28) · [GitHub](https://github.com/Sumitkr28)
 
 ## For developers — running locally
 
