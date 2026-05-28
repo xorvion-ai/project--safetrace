@@ -13,6 +13,7 @@ const ROUTES: Route[] = [
   { id: "bulk",      label: "Bulk",      icon: "files",   path: "/bulk" },
   { id: "dashboard", label: "Dashboard", icon: "chart",   path: "/dashboard" },
   { id: "about",     label: "About",     icon: "info",    path: "/about" },
+  { id: "contact",   label: "Contact",   icon: "mail",    path: "/contact" },
 ];
 
 export function TopNav() {

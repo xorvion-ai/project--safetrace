@@ -1,97 +1,114 @@
 "use client";
 
-import { useRouter } from "next/navigation";
-import { useToast } from "@/hooks/useToast";
+import Link from "next/link";
+
+import { Ico, type IconName } from "@/components/icons";
 import { Logo } from "./Logo";
 
-interface FooterLink {
-  label: string;
-  href?: string;
-  toast?: string;
+interface SocialLink {
+  icon: IconName;
+  href: string;
+  external?: boolean;
+  title: string;
 }
 
-const LINKS: FooterLink[] = [
-  { label: "Contact Us",         href: "mailto:xorvion.ai@gmail.com" },
-  { label: "Terms & Conditions", toast: "Terms doc opens in a new tab. (Demo mode — no PDF attached.)" },
-  { label: "Privacy Policy",     toast: "We log only the URL string and verdict — never page contents." },
-  { label: "Responsible disclosure", toast: "Email: xorvion.ai@gmail.com" },
-  { label: "Status",             toast: "All regions: operational. Median latency 3.8s." },
-  { label: "API",                href: "/about" },
+const SOCIALS: SocialLink[] = [
+  { icon: "globe",   href: "https://xorvion-ai.vercel.app/",        external: true,  title: "Xorvion website" },
+  { icon: "link",    href: "https://www.linkedin.com/company/xorvion/", external: true, title: "Xorvion on LinkedIn" },
+  { icon: "mail",    href: "/contact",                                                   title: "Contact us" },
 ];
 
 export function Footer() {
-  const router = useRouter();
-  const toast = useToast();
-
-  const onClick = (e: React.MouseEvent<HTMLAnchorElement>, l: FooterLink) => {
-    if (l.href?.startsWith("mailto:")) return;
-    e.preventDefault();
-    if (l.href) { router.push(l.href); window.scrollTo({ top: 0, behavior: "smooth" }); return; }
-    toast({ kind: "info", title: l.label, message: l.toast || "Coming soon." });
-  };
-
   return (
     <footer style={{
       position: "relative",
       zIndex: 1,
-      marginTop: 48,
-      padding: "28px 32px 32px",
+      marginTop: 64,
+      padding: "32px 32px 28px",
       borderTop: "1px solid var(--border)",
       background: "linear-gradient(180deg, transparent, rgba(0,0,0,0.35))",
     }}>
       <div style={{
         maxWidth: 1240,
         margin: "0 auto",
-        display: "grid",
-        gridTemplateColumns: "auto 1fr auto",
-        gap: 32,
-        alignItems: "center",
+        display: "flex",
+        flexDirection: "column",
+        gap: 18,
       }}>
-        <div onClick={() => { router.push("/"); window.scrollTo({ top: 0, behavior: "smooth" }); }} style={{ cursor: "pointer" }}>
-          <Logo />
-        </div>
+        <Logo />
 
-        <nav style={{ display: "flex", justifyContent: "center", gap: 22, fontSize: 12.5, color: "var(--text-muted)" }}>
-          {LINKS.map(l => (
-            <a
-              key={l.label}
-              href={l.href || "#"}
-              onClick={(e) => onClick(e, l)}
-              style={{ color: "inherit", textDecoration: "none", transition: "color 150ms ease" }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = "var(--accent)")}
-              onMouseLeave={(e) => (e.currentTarget.style.color = "var(--text-muted)")}
-            >{l.label}</a>
-          ))}
-        </nav>
+        <p style={{
+          maxWidth: 420,
+          color: "var(--text-muted)",
+          fontSize: 14,
+          lineHeight: 1.55,
+          margin: 0,
+        }}>
+          Intelligence beyond URLs. Built by Xorvion in Noida, India.
+        </p>
 
-        <div style={{ display: "flex", alignItems: "center", gap: 14, fontSize: 11, fontFamily: "var(--font-mono)", color: "var(--text-dim)", letterSpacing: "0.04em" }}>
-          <span>© 2026 SafeTrace</span>
-          <span style={{ color: "var(--steel-700)" }}>·</span>
-          <span style={{ display: "inline-flex", alignItems: "center", gap: 5 }}>
-            <span style={{ width: 5, height: 5, background: "var(--safe)", borderRadius: "50%", boxShadow: "0 0 6px var(--safe)" }} />
-            All systems operational
-          </span>
+        <div style={{ display: "flex", gap: 10 }}>
+          {SOCIALS.map(s =>
+            s.external ? (
+              <a
+                key={s.icon}
+                href={s.href}
+                target="_blank"
+                rel="noreferrer noopener"
+                title={s.title}
+                aria-label={s.title}
+                style={socialBtn}
+                onMouseEnter={(e) => { e.currentTarget.style.color = "var(--text)"; e.currentTarget.style.borderColor = "var(--border-strong)"; }}
+                onMouseLeave={(e) => { e.currentTarget.style.color = "var(--text-muted)"; e.currentTarget.style.borderColor = "var(--border)"; }}
+              >
+                <Ico name={s.icon} size={16} />
+              </a>
+            ) : (
+              <Link
+                key={s.icon}
+                href={s.href}
+                title={s.title}
+                aria-label={s.title}
+                style={socialBtn}
+                onMouseEnter={(e) => { e.currentTarget.style.color = "var(--text)"; e.currentTarget.style.borderColor = "var(--border-strong)"; }}
+                onMouseLeave={(e) => { e.currentTarget.style.color = "var(--text-muted)"; e.currentTarget.style.borderColor = "var(--border)"; }}
+              >
+                <Ico name={s.icon} size={16} />
+              </Link>
+            )
+          )}
         </div>
       </div>
 
       <div style={{
         maxWidth: 1240,
-        margin: "20px auto 0",
-        paddingTop: 18,
+        margin: "32px auto 0",
+        paddingTop: 20,
         borderTop: "1px solid var(--border-subtle)",
         fontSize: 11,
-        color: "var(--text-dim)",
-        textAlign: "center",
-        lineHeight: 1.6,
         fontFamily: "var(--font-mono)",
-        letterSpacing: "0.02em",
+        color: "var(--text-dim)",
+        letterSpacing: "0.12em",
+        textTransform: "uppercase",
+        textAlign: "center",
       }}>
-        SafeTrace v1.5-beta · By using this service you agree to our{" "}
-        <a href="#" onClick={(e) => onClick(e, LINKS[1])} style={{ color: "var(--text-muted)", textDecoration: "underline", textUnderlineOffset: 2 }}>Terms</a>.
-        {" "}Contact:{" "}
-        <a href="mailto:xorvion.ai@gmail.com" style={{ color: "var(--text-muted)", textDecoration: "underline", textUnderlineOffset: 2 }}>xorvion.ai@gmail.com</a>.
-        {" "}Threat intel sourced from PhishTank, OpenPhish, URLhaus & Google Safe Browsing. Not affiliated with any brand shown for impersonation testing.
+        © 2026 Xorvion Pvt Ltd · All rights reserved
       </div>
     </footer>
   );
 }
+
+const socialBtn: React.CSSProperties = {
+  width: 38,
+  height: 38,
+  borderRadius: 10,
+  background: "var(--bg-inset)",
+  border: "1px solid var(--border)",
+  display: "inline-flex",
+  alignItems: "center",
+  justifyContent: "center",
+  color: "var(--text-muted)",
+  transition: "all 150ms ease",
+  textDecoration: "none",
+  cursor: "pointer",
+};

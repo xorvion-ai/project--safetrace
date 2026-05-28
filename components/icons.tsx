@@ -70,6 +70,10 @@ const IconClock = (p: IconProps) => <Icon {...p}><circle cx="12" cy="12" r="10"/
 const IconTarget = (p: IconProps) => <Icon {...p}><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></Icon>;
 const IconLayers = (p: IconProps) => <Icon {...p}><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></Icon>;
 const IconMenu = (p: IconProps) => <Icon {...p}><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></Icon>;
+const IconLink = (p: IconProps) => <Icon {...p}><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></Icon>;
+const IconMail = (p: IconProps) => <Icon {...p}><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></Icon>;
+const IconMapPin = (p: IconProps) => <Icon {...p}><path d="M20 10c0 7-8 12-8 12s-8-5-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></Icon>;
+const IconSend = (p: IconProps) => <Icon {...p}><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></Icon>;
 
 export type IconName =
   | "shield-check" | "shield-alert" | "fish" | "bug" | "paint-bucket"
@@ -78,7 +82,8 @@ export type IconName =
   | "chevron-down" | "chevron-right" | "copy" | "check" | "x"
   | "download" | "share" | "external-link" | "arrow-right" | "lock"
   | "upload" | "github" | "filter" | "plus" | "activity"
-  | "zap" | "cpu" | "terminal" | "clock" | "target" | "layers" | "menu";
+  | "zap" | "cpu" | "terminal" | "clock" | "target" | "layers" | "menu"
+  | "link" | "mail" | "map-pin" | "send";
 
 const ICONS: Record<IconName, (p: IconProps) => JSX.Element> = {
   "shield-check": IconShieldCheck,
@@ -118,6 +123,10 @@ const ICONS: Record<IconName, (p: IconProps) => JSX.Element> = {
   target: IconTarget,
   layers: IconLayers,
   menu: IconMenu,
+  link: IconLink,
+  mail: IconMail,
+  "map-pin": IconMapPin,
+  send: IconSend,
 };
 
 export interface IcoProps extends IconProps {
