@@ -79,16 +79,14 @@ Fully stateless — no database, no user accounts, no tracking. Screenshots are 
 
 ## Built by
 
-A product by **[Xorvion](https://xorvion-ai.vercel.app/)** — AI infrastructure & security tooling out of Noida, India.
+**Sumit Kumar** — AI/ML Engineer.
 
-**Sumit Kumar** — AI/ML Engineer, founder of Xorvion.
+Connect with me:
 
-Connect:
-
-- 🌐 [xorvion-ai.vercel.app](https://xorvion-ai.vercel.app/)
-- 💼 [Xorvion on LinkedIn](https://www.linkedin.com/company/xorvion/)
-- 📧 [xorvion.ai@gmail.com](mailto:xorvion.ai@gmail.com) · [sumitchoudhary2812@gmail.com](mailto:sumitchoudhary2812@gmail.com)
-- 👤 [Personal LinkedIn](https://www.linkedin.com/in/sumitkr28) · [GitHub](https://github.com/Sumitkr28)
+- 📧 [sumitchoudhary2812@gmail.com](mailto:sumitchoudhary2812@gmail.com)
+- 💼 [LinkedIn](https://www.linkedin.com/in/sumitkr28)
+- 💻 [GitHub](https://github.com/Sumitkr28)
+- 🌐 [Xorvion](https://xorvion-ai.vercel.app/)
 
 ## For developers — running locally
 
