@@ -89,28 +89,10 @@ Connect with me:
 - 🌐 [Xorvion](https://xorvion-ai.vercel.app/)
 - 📦 [SafeTrace on GitHub](https://github.com/xorvion-ai/project--safetrace)
 
-## For developers — running locally
+## About Xorvion
 
-<details>
-<summary>Click to expand</summary>
+Built by **Xorvion Pvt Ltd** — based in Noida, India and founded by Sumit Kumar, making tools we want to use ourselves. SafeTrace is one of our products.
 
-```bash
-# Frontend
-git clone https://github.com/Sumitkr28/Project--SafeTrace.git
-cd Project--SafeTrace
-npm install
-cp .env.example .env.local
-# point NEXT_PUBLIC_API_URL at your backend (default: http://localhost:7860)
-npm run dev
-
-# Backend (separate clone)
-git clone https://huggingface.co/spaces/Sumitkr28/safetrace-api
-cd safetrace-api
-pip install -r requirements.txt
-playwright install chromium
-uvicorn api:app --port 7860
-```
-
-The 2 GB model auto-downloads from <https://huggingface.co/Sumitkr28/safetrace-model> on first run.
-
-</details>
+🌐 **Website:** [xorvion-ai.vercel.app](https://xorvion-ai.vercel.app/)  
+🔗 **LinkedIn:** [linkedin.com/company/xorvion](https://linkedin.com/company/xorvion)  
+📧 **Email:** [xorvion.ai@gmail.com](mailto:xorvion.ai@gmail.com)
