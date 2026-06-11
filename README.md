@@ -87,6 +87,7 @@ Connect with me:
 - 💼 [LinkedIn](https://www.linkedin.com/in/sumitkr28)
 - 💻 [GitHub](https://github.com/Sumitkr28)
 - 🌐 [Xorvion](https://xorvion-ai.vercel.app/)
+- 📦 [SafeTrace on GitHub](https://github.com/xorvion-ai/project--safetrace)
 
 ## For developers — running locally
 
@@ -113,7 +114,3 @@ uvicorn api:app --port 7860
 The 2 GB model auto-downloads from <https://huggingface.co/Sumitkr28/safetrace-model> on first run.
 
 </details>
-
-## License
-
-MIT — free to use, fork, and adapt.
