@@ -86,8 +86,6 @@ Connect with me:
 - 📧 [sumitchoudhary2812@gmail.com](mailto:sumitchoudhary2812@gmail.com)
 - 💼 [LinkedIn](https://www.linkedin.com/in/sumitkr28)
 - 💻 [GitHub](https://github.com/Sumitkr28)
-- 🌐 [Xorvion](https://xorvion-ai.vercel.app/)
-- 📦 [SafeTrace on GitHub](https://github.com/xorvion-ai/project--safetrace)
 
 ## About Xorvion
 
